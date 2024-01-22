@@ -163,8 +163,28 @@ selectPagesBtns.forEach((addNewPage) => {
 });
 
 //copy url
-document.querySelector(".copy-link").addEventListener("click", () => {
+document.querySelector(".copy-link").addEventListener("click", (e) => {
   navigator.clipboard.writeText(location.href);
+  e.target.innerText = "Copied";
+  setTimeout(() => {
+    e.target.innerText = "Copy link";
+  }, 500);
+});
+
+//save btn
+document.querySelector(".save").addEventListener("click", () => {
+  document.querySelector(".save-model").style.display = "flex";
+  document.querySelector(".project-link").innerHTML = location.href;
+});
+document.querySelector(".close-save-model").addEventListener("click", () => {
+  document.querySelector(".save-model").style.display = "none";
+});
+document.querySelector(".save-copy-link").addEventListener("click", (e) => {
+  navigator.clipboard.writeText(location.href);
+  e.target.innerText = "Copied";
+  setTimeout(() => {
+    e.target.innerText = "Copy link";
+  }, 500);
 });
 
 //print PDF

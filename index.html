@@ -9,12 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <div class="top-bar">
-      <div class="add-pages">Add page</div>
+      <div class="add-pages"><img src="icons\plus.svg" alt="plus" /> Add page</div>
       <div class="save">Save</div>
       <div class="copy-link">Copy link</div>
       <button class="download">Download PDF</button>
@@ -47,9 +51,22 @@
         </div>
       </div>
     </div>
+    <div class="save-model">
+      <div class="save-message">
+        <img src="icons\x.svg" class="close-save-model" alt="close model" />
+        <h4>The project is saved</h4>
+        <p>Here is the link of your project</p>
+        <span class="project-link"></span>
+        <span class="save-copy-link">Copy link</span>
+      </div>
+    </div>
 
     <div class="space">
       <div class="panel drag-and-drop">
+        <div class="frame header">
+          <img class="remove" src="icons\trash.svg" alt="remove" />
+          <img src="frames\header.png" />
+        </div>
         <div class="frame hero">
           <img class="remove" src="icons\trash.svg" alt="remove" />
           <h2 class="frame-heading contenteditable">Hero</h2>
@@ -111,14 +128,7 @@
           <img src="frames\blog.png" />
         </div>
       </div>
-      <div class="workspace">
-        <div class="sitemaps-wrap">
-          <div class="sitemaps-title-wrap">
-          <span class="sitemaps-title contenteditable">Home</span>
-          <img class="remove-page" src="icons\trash.svg" alt="remove" >
-        </div>
-          <div class="sitemaps"></div>
-      </div>
+      <div class="workspace"></div>
     </div>
     <script src="script.js" type="module"></script>
   </body>
